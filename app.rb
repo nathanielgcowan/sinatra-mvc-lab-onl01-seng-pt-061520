@@ -5,7 +5,7 @@ class App < Sinatra::Base
     erb :user_input
   end
 
-  post '/' do
+  post '/piglatinizer' do
     @analyzed_text = TextAnalyzer.new(params[:user_text])
     
     erb :results
