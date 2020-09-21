@@ -16,7 +16,6 @@ class PigLatinizer
     if vowel?(word[0])
       word + "way"
     else
-    # word starts with one or more consonants
       vowel_index = word.index(/[aAeEiIoOuU]/)
       consonants = word.slice(0..vowel_index-1)
       word_leftover = word.slice(vowel_index..word.length)
