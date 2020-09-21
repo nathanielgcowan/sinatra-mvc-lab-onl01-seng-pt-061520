@@ -6,7 +6,7 @@ class App < Sinatra::Base
   end
 
   post '/piglatinizer' do
-    @analyzed_text = TextAnalyzer.new(params[:user_text])
+    @pl = PigLatinizer.new
     
     erb :results
   end
